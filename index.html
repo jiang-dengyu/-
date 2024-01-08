@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--boostrap css導入-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--axios css導入-->
+
+
+
+
+</head>
+
+<body>
+  <!--nav bar 包含home跟favorite-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mgt-5" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Favorite</a>
+          </li>
+        </ul>
+  </nav>
+  <!--搜尋列-->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid ">
+      <form class="d-flex" role="search">
+        <input class="form-control me-5" type="search" placeholder="Enter the name..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--cards container-->
+  <div class="row justify-content-center mt-4" id="data-panel">
+    <!--各個cards-->
+    <div class="col-sm-3 ">
+      <div class="mb-2">
+        <div class="card ">
+          <img src=" " class="card-img-top" alt="Movie Poster" />
+          <div class="card-body ">
+            <h5 class="card-title ">Movie title</h5>
+          </div>
+          <div class="card-footer ">
+            <button class="btn btn-primary btn-show-users" data-bs-toggle="modal" data-bs-target="#movie-modal">
+              More
+            </button>
+            <button class="btn btn-info btn-add-favorite">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--footer結尾分頁-->
+  <nav aria-label="Page navigation example ">
+    <ul class="pagination justify-content-center my-5">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!--跳出視窗modal-->
+  <div class="modal fade" id="movie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="useresModal-title">Users Name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body" id="movie-modal-body">
+          <div class="row">
+            <div class="col">
+              <p id="useresModal-email">tudor-pogor@example.com</p>
+              <p id="useresModal-gender">male</p>
+              <p id="useresModal-age">29</p>
+              <p id="useresModal-region">Romania</p>
+              <p id="useresModal-birthday">12/14/1990</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--boostrap bundle js導入-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!--axios js載入-->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <!--自己index js導入-->
+  <script src="./index.js"></script>
+</body>
+
+</html>
